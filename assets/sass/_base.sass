@@ -2,15 +2,15 @@
   margin: 0
   padding: 0
   box-sizing: border-box
-  font-family: var(--font)
+  font-family: var(--font-famaly)
 
 body
-  background: var(--light)
+  background: var(--bg)
 
 header
-  background-color: var(--bg-gray)
-  width: 100%
-  height: 200px
+  background-color: var(--light-gray)
+  width: var(--width-base)
+  height: calc( var(--height-base) / 8  )
   top: 0
   position: fixed
   z-index: 1
@@ -25,15 +25,15 @@ main
   z-index: 10
   position: relative
   padding: 100px
-  min-height: 100vh
-  margin-bottom: 200px
-  margin-top: 200px
+  min-height: var(--height-base)
+  margin-bottom: calc( var(--height-base) / 8  )
+  margin-top: calc( var(--height-base) / 8  )
 
 footer
-  background-color: var(--bg-gray)
+  background-color: var(--light-gray)
   bottom: 0
-  width: 100%
-  height: 200px
+  width: var(--width-base)
+  height: calc( var(--height-base) / 8  )
   z-index: 1
   position: fixed
   display: flex
