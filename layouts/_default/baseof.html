@@ -1,0 +1,36 @@
+{{ $config := site.Params }}
+{{ $context := . }}
+<!doctype html>
+<html lang="{{ site.Language.Lang }}">
+<head>
+  {{- partial "head" . }}
+</head>
+<body class="page-{{ .Kind }}" id="pagetop">
+  <header>
+    {{- partial "nav" . }}
+  </header>
+  <main>
+    {{ $docSections := site.Params.docSections }}
+    {{- with $docSections }}{{- else }}
+      {{- $docSections = "docs" }}
+    {{- end }}
+    {{ $uniqueHomepage := .IsHome }}
+    {{ if site.Params.uniqueHomepage }}
+      {{ if .IsHome }}
+        {{ $uniqueHomepage = true }}
+      {{ end }}
+    {{ else }}
+      {{ $uniqueHomepage = false }}
+    {{ end }}
+    {{- if and (in $docSections .Section) (ne $uniqueHomepage true) }}
+      {{- partial "document" . }}
+    {{- else }}
+      <div class="content">
+        {{- block "main" . }}{{ end }}
+      </div>
+  {{- end -}}
+  </main>
+  <footer>
+    {{- partial "footer" . }}
+  </footer>
+</body>

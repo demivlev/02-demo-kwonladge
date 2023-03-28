@@ -1,0 +1,24 @@
+docSections = ["docs", "tutorials"]
+uniqueHomePage = false
+blogDir = "blog"
+time_format_blog = "Monday, January 02, 2006"
+time_format_default = "January 2, 2006"
+enableDarkMode = false
+enableInlineShortcodes = true
+enableEmoji = true
+otherSearchableFields = ["Tags", "Categories", "CustomField"]
+
+# Site logo
+[logo]
+  lightMode = "#"
+  darkMode = "#"
+
+[source]
+  name = "#"
+  iconLight = "#"
+  iconDark = "#"
+  url = "#"
+
+[author]
+  name = "#"
+  url = "#"
