@@ -9,9 +9,9 @@
   <header>
     {{- partial "nav" . }}
   </header>
-  <aside>
+  {{/*  <aside>
     {{ partial "aside" . }}
-  </aside>
+  </aside>  */}}
   <main>
     {{ $docSections := site.Params.docSections }}
     {{- with $docSections }}{{- else }}
